@@ -26,11 +26,16 @@ reqst_channel = environ.get('REQST_CHANNEL_ID','')
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
 NO_RESULTS_MSG = is_enabled((environ.get("NO_RESULTS_MSG", 'True')), False)
-CHNL_LNK = "https://t.me/MINI_GAMES_ASSOCIATION"
-GRP_LNK = "https://t.me/MINI_GAMES_CHAT"
-PICS = ["https://telegra.ph/file/58116c99883d2d87233da.jpg","https://telegra.ph/file/53317151ec8a730451135.jpg","https://telegra.ph/file/2e797f914ce653bf844a8.jpg", "https://telegra.ph/file/fc9c42ceeab0d92ccbddd.jpg"] 
-
-
+CHNL_LNK = "https://t.me/Comico_X"
+GRP_LNK = "https://t.me/ComicoX_X"
+    # List of picture URLs
+PICS = [
+         "https://telegra.ph/file/86d3b142f409d492262a8-8d091d5adb6e9ee30d.png",
+         "https://telegra.ph/file/b5d8c07a5908e7b405c64-84dafb64c8d30ecf94.png",
+         "https://telegra.ph/file/d379cf0dc4f206ca6751e-f46eb0ec6b2d1bbd8c.png",
+         "https://telegra.ph/file/41fd776f78d2f08b867a5-697c7a9d0c16b011c8.png",
+         "https://telegra.ph/file/893a191dd168ffe6fbac9-0cc9d923e7240393f2.png",
+    ]
 DATABASE_URI = "mongodb+srv://razerax:razerax@mg.ke2dgwg.mongodb.net/?retryWrites=true&w=majority&appName=mg"
 
 DATABASE_NAME = environ.get('DATABASE_NAME', 'mg')
