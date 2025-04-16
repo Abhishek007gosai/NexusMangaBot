@@ -54,9 +54,7 @@ async def save_group(bot, message):
                         await (temp.MELCOW['welcome']).delete()
                     except:
                         pass
-                temp.MELCOW['welcome'] = await message.reply_video(
-                                                 video=(MELCOW_VID),
-                                                 caption=(Script.MELCOW_ENG.format(u.mention, message.chat.title)),
+                temp.MELCOW['welcome'] = await message.reply_text(text=Script.MELCOW_ENG.format(u.mention, message.chat.title),
                                                  reply_markup=InlineKeyboardMarkup(
                                                                          [[
                                                                            InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
@@ -65,8 +63,13 @@ async def save_group(bot, message):
                                                                            InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/bharath_boy")
                                                                          ]]
                                                  ),
-                                                 parse_mode=enums.ParseMode.HTML
-                )
+                                                 parse_mode=enums.ParseMode.HTML, show_caption_above_media=True,
+        link_preview_options=LinkPreviewOptions(
+            is_disabled=False,
+            prefer_small_media=False,
+            prefer_large_media=True,
+            show_above_text=True
+        )
                 
         if settings["auto_delete"]:
             await asyncio.sleep(600)
