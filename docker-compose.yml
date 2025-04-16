@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  bot:
+    build: .
+    environment:
+      - TOKEN=${TOKEN}
+      - API_ID=${API_ID}
+      - API_HASH=${API_HASH}
+      - STRING=${STRING}
+      - AUTH_CHANNEL=${AUTH_CHANNEL}
+      - BOT_TOKEN=${BOT_TOKEN}
+      - CHANNELS=${CHANNELS}
+      - ADMINS=${ADMINS}
+      - LOG_CHANNEL=${LOG_CHANNEL}
+      - DATABASE_NAME=${DATABASE_NAME}
+      - DATABASE_URI=${DATABASE_URI}
+    restart: on-failure
