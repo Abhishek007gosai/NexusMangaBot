@@ -11,6 +11,8 @@ import asyncio
 
 @Client.on_message(filters.new_chat_members & filters.group)
 async def save_group(bot, message):
+    images = Script.PICS[1:]
+    new_image = random.choice(images)
     r_j_check = [u.id for u in message.new_chat_members]
     if temp.ME in r_j_check:
         if not await db.get_chat(message.chat.id):
@@ -54,7 +56,9 @@ async def save_group(bot, message):
                         await (temp.MELCOW['welcome']).delete()
                     except:
                         pass
-                temp.MELCOW['welcome'] = await message.reply_text(text=Script.MELCOW_ENG.format(u.mention, message.chat.title),
+                text =f"<a href=\"{new_image}\">&#8205;</a>"+ f"""<b>ʜᴇʟʟᴏ {user_mention}</b>\n\n<i>ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ɪɴ ᴏᴜʀ ᴄʜᴀɴɴᴇʟ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ sᴏ ʏᴏᴜ ᴄᴀɴ'ᴛ ᴜsᴇ ᴛʜᴇ ʙᴏᴛ...</i>\n\n<b>ɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴜsᴇ ᴛʜᴇ ʙᴏᴛ, ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ 'ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ' ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴀɴᴅ ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀɴɴᴇʟ, ᴛʜᴇɴ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ '↻ ᴄʜᴇᴄᴋ ᴀɢᴀɪɴ' ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ...</b>\n\n<i>ᴛʜᴇɴ ʏᴏᴜ ᴡɪʟʟ ʙᴇ ᴀʙʟᴇ ᴛᴏ ᴜsᴇ ᴛʜᴇ ʙᴏᴛ...</i>"""
+
+                temp.MELCOW['welcome'] = await message.reply_text(text+=Script.MELCOW_ENG.format(u.mention, message.chat.title),
                                                  reply_markup=InlineKeyboardMarkup(
                                                                          [[
                                                                            InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
@@ -63,14 +67,10 @@ async def save_group(bot, message):
                                                                            InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/bharath_boy")
                                                                          ]]
                                                  ),
-                                                 parse_mode=enums.ParseMode.HTML, show_caption_above_media=True,
-        link_preview_options=LinkPreviewOptions(
-            is_disabled=False,
-            prefer_small_media=False,
-            prefer_large_media=True,
-            show_above_text=True
-        )
-                
+                                                 parse_mode=enums.ParseMode.HTML, show_caption_above_media=True,link_preview_options=LinkPreviewOptions(is_disabled=False,prefer_small_media=False,prefer_large_media=True,show_above_text=True)
+
+
+
         if settings["auto_delete"]:
             await asyncio.sleep(600)
             await (temp.MELCOW['welcome']).delete()
