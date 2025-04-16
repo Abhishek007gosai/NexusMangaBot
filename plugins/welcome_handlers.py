@@ -13,7 +13,7 @@ from db.users_chats_db import db
 from plugins.utils import temp, is_subscribed
 
 # Import necessary constants
-from info import AUTH_CHANNEL, CHNL_LNK, LOG_CHANNEL, GRP_LNK, ADMINS
+from info import AUTH_CHANNEL, CHNL_LNK, LOG_CHANNEL, GRP_LNK, ADMINS, VERIFY
 
 # Initialize logger
 logger = logging.getLogger(__name__)
@@ -71,7 +71,7 @@ async def welcome(client, message):
         )
 
     # Check subscription status
-    if AUTH_CHANNEL and not await is_subscribed(client, message):
+    if AUTH_CHANNEL and VERIFY and not await is_subscribed(client, message):
         try:
             invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL))
 
