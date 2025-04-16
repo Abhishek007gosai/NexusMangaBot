@@ -17,7 +17,7 @@ CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHAN
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '5651594253').split()]
-auth_channel = environ.get('AUTH_CHANNEL','')#-1002548989153')
+auth_channel = environ.get('AUTH_CHANNEL','-1002548989153')
 auth_grp = environ.get('AUTH_GROUP','-1002214107507')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
@@ -53,13 +53,11 @@ IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', True))
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 PORT = environ.get("PORT", "8080")
 UPDATE_CHANNEL = environ.get('CHNL_LNK', 'https://t.me/+OJPH-0u_62FmZjI9')
-MSG_ALRT = environ.get('MSG_ALRT', '❤ ᴊᴏɪɴ @FILMZTUBE ❤')
+MSG_ALRT = environ.get('MSG_ALRT', '❤..... ❤')
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', -1002593796821))
 MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "True")), True)
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'MINI_GAMES_CHAT')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'ComicoX_X')
 TUTORIAL = environ.get('TUTORIAL', 'https://t.me/filmztube_openlink/34')
 BUY_PREMIUM = environ.get('TUTORIAL', 'https://t.me/filmztube_openlink/29')
 AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "True")), True)
-MELCOW_VID = environ.get("MELCOW_VID", "https://graph.org/file/8faa88f9046f3f901e174.mp4")
-
 
