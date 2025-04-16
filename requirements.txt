@@ -11,3 +11,4 @@ pytz
 pyfiglet
 shortzy
 PyroTgCrypto
+flask
