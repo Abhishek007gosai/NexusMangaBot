@@ -93,8 +93,7 @@ async def welcome(client, message):
             retry_url = f"https://t.me/{bot_username}?start={message.command[1]}"
             btn.append([InlineKeyboardButton("↻ Tʀʏ Aɢᴀɪɴ", url=retry_url)])
             
-        text = f"""<b>ʜᴇʟʟᴏ {user_mention}</b>\n\n<i>ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ɪɴ ᴏᴜʀ ᴄʜᴀɴɴᴇʟ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ sᴏ ʏᴏᴜ ᴄᴀɴ'ᴛ ᴜsᴇ ᴛʜᴇ ʙᴏᴛ...</i>\n\n<b>ɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴜsᴇ ᴛʜᴇ ʙᴏᴛ, ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ 'ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ' ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴀɴᴅ ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀɴɴᴇʟ, ᴛʜᴇɴ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ '↻ ᴄʜᴇᴄᴋ ᴀɢᴀɪɴ' ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ...</b>\n\n<i>ᴛʜᴇɴ ʏᴏᴜ ᴡɪʟʟ ʙᴇ ᴀʙʟᴇ ᴛᴏ ᴜsᴇ ᴛʜᴇ ʙᴏᴛ...</i>"""
-        new_caption += f"<a href=\"{new_image}\">&#8205;</a>"
+        text =f"<a href=\"{new_image}\">&#8205;</a>"+ f"""<b>ʜᴇʟʟᴏ {user_mention}</b>\n\n<i>ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ɪɴ ᴏᴜʀ ᴄʜᴀɴɴᴇʟ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ sᴏ ʏᴏᴜ ᴄᴀɴ'ᴛ ᴜsᴇ ᴛʜᴇ ʙᴏᴛ...</i>\n\n<b>ɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴜsᴇ ᴛʜᴇ ʙᴏᴛ, ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ 'ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ' ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴀɴᴅ ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀɴɴᴇʟ, ᴛʜᴇɴ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ '↻ ᴄʜᴇᴄᴋ ᴀɢᴀɪɴ' ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ...</b>\n\n<i>ᴛʜᴇɴ ʏᴏᴜ ᴡɪʟʟ ʙᴇ ᴀʙʟᴇ ᴛᴏ ᴜsᴇ ᴛʜᴇ ʙᴏᴛ...</i>"""
         
         await message.reply_text(text,
         reply_markup=btn,
