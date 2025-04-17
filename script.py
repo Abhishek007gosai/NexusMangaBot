@@ -46,7 +46,7 @@ Here are all the commands you can use:
 ✯ ʟᴀɴɢᴜᴀɢᴇ: <a href='https://www.python.org/download/releases/3.0/'>ᴘʏᴛʜᴏɴ 3</a>
 ✯ ᴅᴀᴛᴀʙᴀsᴇ: <a href='https://www.mongodb.com/'>ᴍᴏɴɢᴏᴅʙ</a>
 ✯ ʙᴏᴛ sᴇʀᴠᴇʀ: <a href='https://railway.app/'>ʀᴀɪʟᴡᴀʏ​</a>
-✯ ʙᴜɪʟᴅ sᴛᴀᴛᴜs: ᴠ2.7.1 [ sᴛᴀʙʟᴇ ]</b>"""
+✯ ʙᴜɪʟᴅ sᴛᴀᴛᴜs: ᴠ1.1.0 [ ʙᴇᴛᴀ ]</b>"""
 
     FAQ_TXT = """<b>Frequently Asked Questions - {}</b>
 
