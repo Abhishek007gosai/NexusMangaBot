@@ -1,6 +1,6 @@
 import logging
 import time
-from info import DATABASE_NAME, DATABASE_URI, MELCOW_NEW_USERS, AUTO_DELETE,SHORTLINK_API, SHORTLINK_URL, IS_SHORTLINK, TUTORIAL
+from info import DATABASE_NAME, DATABASE_URI
 logger = logging.getLogger(__name__)
 try:
     import motor.motor_asyncio
@@ -153,23 +153,7 @@ class Database:
             )
         await self.grp.update_one({'id': int(id)}, {'$set': {'chat_status': chat_status}})
         
-    async def update_settings(self, id, settings):
-        await self.grp.update_one({'id': int(id)}, {'$set': {'settings': settings}})
-        
-    
-    async def get_settings(self, id):
-        default = {
-            'welcome': MELCOW_NEW_USERS,
-            'auto_delete': AUTO_DELETE,
-            'shortlink': SHORTLINK_URL,
-            'shortlink_api': SHORTLINK_API,
-            'is_shortlink': IS_SHORTLINK,
-            'tutorial': TUTORIAL
-        }
-        chat = await self.grp.find_one({'id':int(id)})
-        if chat:
-            return chat.get('settings', default)
-        return default
+
     
 
     async def disable_chat(self, chat, reason="No Reason"):

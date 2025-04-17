@@ -16,7 +16,7 @@ from shortzy import Shortzy
 import http.client
 import json
 from db.users_chats_db import db
-from info import AUTH_CHANNEL, SHORTLINK_URL, SHORTLINK_API, SHORTLINK_API2, SHORTLINK_URL2, IS_SHORTLINK, LOG_CHANNEL, GRP_LNK, CHNL_LNK, SECOND_SHORTLINK_URL, SECOND_SHORTLINK_API
+from info import AUTH_CHANNEL, SHORTLINK_URL, SHORTLINK_API, SHORTLINK_API2, SHORTLINK_URL2
 
 
 logger = logging.getLogger(__name__)
@@ -46,7 +46,7 @@ class temp(object):
     B_NAME = None
     GETALL = {}
     SHORT = {}
-    SETTINGS = {}
+
 
 async def is_subscribed(bot, query):
     try:
@@ -64,12 +64,7 @@ async def is_subscribed(bot, query):
     return False
 
 
-async def get_settings(group_id):
-    settings = temp.SETTINGS.get(group_id)
-    if not settings:
-        settings = await db.get_settings(group_id)
-        temp.SETTINGS[group_id] = settings
-    return settings
+
 async def broadcast_messages(user_id, message):
     try:
         await message.copy(chat_id=user_id)
@@ -292,9 +287,9 @@ async def short_url(url):
     return link
 
 async def second_short_url(url):
-    conn = http.client.HTTPSConnection(SECOND_SHORTLINK_URL)
+    conn = http.client.HTTPSConnection(SHORTLINK_URL2)
     payload = json.dumps({
-        "api_key": SECOND_SHORTLINK_API,
+        "api_key": SHORTLINK_API2,
         "url": url
     })
     headers = {
