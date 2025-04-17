@@ -128,20 +128,20 @@ async def welcome(client, message):
         [
             [
                 InlineKeyboardButton(
-                    "⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬",
+                    "⤬ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⤬",
                     url=f"http://t.me/{bot_username}?startgroup=true",
                 )
             ],
             [
-                InlineKeyboardButton("⚜️ MAIN ᴄʜᴀɴɴᴇʟ", url=CHNL_LNK),
-                InlineKeyboardButton("🔱 MAIN ɢʀᴏᴜᴘ", url=GRP_LNK),
+                InlineKeyboardButton("⚜️ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ", url=CHNL_LNK),
+                InlineKeyboardButton("🔱 ᴍᴀɪɴ ɢʀᴏᴜᴘ", url=GRP_LNK),
             ],
             [
                 InlineKeyboardButton("🔰 ʜᴇʟᴘ", callback_data="help"),
                 InlineKeyboardButton("⚠️ ᴀʙᴏᴜᴛ", callback_data="about"),
-                InlineKeyboardButton("❓ FAQ", callback_data="faq"),
+                InlineKeyboardButton("❓ ғᴀǫ", callback_data="faq"),
             ],
-            [InlineKeyboardButton("CLOSE", callback_data="deletemsg")],
+            [InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="deletemsg")],
         ]
     )
 
