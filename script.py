@@ -58,19 +58,23 @@ Here are all the commands you can use:
 2️⃣ <b>What formats are supported?</b>
    - Available formats: <b>PDF</b>, <b>EPUB</b>, <b>CBZ</b>
 
-3️⃣ <b>Are there download limits?</b>  
-   - <b>No limits!</b> Download as much as you want.  
-
-4️⃣ <b>Which format should I choose?</b>  
+3️⃣ <b>Which format should I choose?</b>  
    - <b>CBZ</b>: Best for <i>manhwa/manhua</i> 
    - <b>EPUB</b>: Best for <i>manga</i> 
    - <b>PDF</b>: Try it yourself and see! 
+
+4️⃣ <b>How to open those formats?</b>
+   - Use any ebook reader app from playstore/any store.
+   - Ex: <a href="https://play.google.com/store/apps/details?id=com.flyersoft.moonreader">Moon+ Reader</a>/<a href="https://play.google.com/store/apps/details?id=com.reader.books">eBoox</a>
+   - There are many more apps available, you can search for them online!
    
-5️⃣ <b>Why are some pages missing or not downloaded?</b>
+5️⃣ <b>Are there download limits?</b>  
+   - <b>No limits!</b> Download as much as you want.
+
+6️⃣ <b>Why are some pages missing/not downloaded?</b>
    - Sometime sever issues. Try again later.
    - If the issue persists, reach out support group.
    - <b>Do not spam!</b>"""
-
 
 
 
