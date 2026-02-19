@@ -28,7 +28,7 @@ PICS = [
          "https://telegra.ph/file/41fd776f78d2f08b867a5-697c7a9d0c16b011c8.png",
          "https://telegra.ph/file/893a191dd168ffe6fbac9-0cc9d923e7240393f2.png",
     ]
-DATABASE_URI = "mongodb+srv://hanxsooyoung:qGsVMuuKjE12Gewz@cluster0.oooqdg5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+DATABASE_URI = ""
 DATABASE_NAME = environ.get('DATABASE_NAME', 'cluster0')
 
 
@@ -44,6 +44,7 @@ LOG_CHANNEL = int(environ.get('LOG_CHANNEL', -1002456565415))
 MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "True")), False)
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'ComicoX_X')
 AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "True")), True)
+
 
 
 
