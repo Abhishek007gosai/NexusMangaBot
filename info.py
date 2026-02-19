@@ -34,7 +34,7 @@ DATABASE_NAME = environ.get('DATABASE_NAME', 'cluster0')
 
 # Others
 VERIFY = bool(environ.get('VERIFY', False))
-SHORTLINK_URL = environ.get('SHORTLINK_URL2', 'urlshortx.com')
+SHORTLINK_URL2 = environ.get('SHORTLINK_URL2', 'urlshortx.com')
 SHORTLINK_API2 = environ.get('SHORTLINK_API2', 'eff81ef8a6d0e76498ab428cae7d964731ca6772')
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'api.shareus.io')
 SHORTLINK_API = environ.get('SHORTLINK_API', 'lVSWhw4wnGaKDSDltbmcmYGQlkK2')
@@ -44,6 +44,7 @@ LOG_CHANNEL = int(environ.get('LOG_CHANNEL', -1002456565415))
 MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "True")), False)
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'ComicoX_X')
 AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "True")), True)
+
 
 
 
